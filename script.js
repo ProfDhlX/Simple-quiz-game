@@ -3,7 +3,7 @@ const resultContainer = document.getElementById("result");
 const submitButton = document.getElementById("submit-btn");
 
 function shuffleArray(arr) {
-    // Shuffle the array using the Fisher-Yates (Knuth) algorithm
+   
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -13,7 +13,7 @@ function shuffleArray(arr) {
 function displayQuiz() {
     let output = "";
     quizData.forEach((data, index) => {
-        const optionsCopy = [...data.options]; // Create a copy to shuffle options without changing the original array
+        const optionsCopy = [...data.options];
         shuffleArray(optionsCopy);
         output += `
             <div class="question">
